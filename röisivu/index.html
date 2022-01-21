@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
 </head>
 <body>
     <!-- header section -->
@@ -44,7 +45,61 @@
             <p>don't have an account <a href="#">create ane!</a></p>
         </form>
     </header>
-    <!-- script -->
-    <script src="script.js"></script>
+    <div class="contact-info">
+        <div id="close-contact-info" class="fas fa-times"></div>
+        <div class="info">
+            <i class="fas fa-phone"></i>
+            <h3>phone number</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+        </div>
+        <div class="info">
+            <i class="fas fa-envelope"></i>
+            <h3>email address</h3>
+            <p>qazwsx@gmail.com</p>
+            <p>edcrfv@gmail.com</p>
+        </div>
+        <div class="info">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>office address</h3>
+            <p>mumbai, india - 400104</p>
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+        </div>
+    </div>
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="home-slider">
+            <div class="w">
+                <section class="slide" style="background:url(images/home-slide-1.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>we provide best service</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sequi impedit, eaque quod id harum!</p>
+                        <a href="#about" class="btn">get started</a>
+                    </div>
+                </section>
+                <section class="slide" style="background:url(images/home-slide-2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>making dream come to life</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sequi impedit, eaque quod id harum!</p>
+                        <a href="#about" class="btn">get started</a>
+                    </div>
+                </section>
+                <section class="slide" style="background:url(images/home-slide-3.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>from concept to creation</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sequi impedit, eaque quod id harum!</p>
+                        <a href="#about" class="btn">get started</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
 </body>
+<!-- script -->
+<script src="script.js"></script>
 </html>

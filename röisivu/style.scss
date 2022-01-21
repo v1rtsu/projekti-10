@@ -72,12 +72,16 @@ html {
     }
 }
 
+section {
+    padding: 5rem 10%;
+}
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 3rem;
-    background: var(--white);
-    color: var(--black);
+    background: var(--black);
+    color: var(--white);
     cursor: pointer;
     font-size: 1.7rem;
     text-transform: capitalize;
@@ -148,24 +152,24 @@ html {
         &.active {
             display: flex;
         }
-    }
 
-    input {
-        // width: 100%;
-        padding: 1.2rem 1.4rem;
-        background: var(--light-bg);
-        font-size: 1.6rem;
-        color: var(--light-color);
-    }
-
-    label {
-        font-size: 2.5rem;
-        color: var(--black);
-        cursor: pointer;
-        margin: 0 1rem;
-
-        &:hover {
-            color: var(--yellow);
+        input {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            background: var(--light-bg);
+            font-size: 1.6rem;
+            color: var(--light-color);
+        }
+    
+        label {
+            font-size: 2.5rem;
+            color: var(--black);
+            cursor: pointer;
+            margin: 0 1rem;
+    
+            &:hover {
+                color: var(--yellow);
+            }
         }
     }
 
@@ -179,6 +183,11 @@ html {
         padding: 2rem;
         text-align: center;
         animation: fadeIn .2s linear;
+        display: none;
+
+        &.active {
+            display: block;
+        }
 
         h3 {
             @include titleText(2.5rem);
@@ -219,6 +228,110 @@ html {
                 }
             }
         }
+
+        .btn {
+            width: 100%;
+        }
+
+        p {
+            @include graphText(1.5rem);
+            padding-top: 1.5rem;
+            line-height: 2;
+
+            a {
+                color: var(--yellow);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.contact-info {
+    position: fixed;
+    top: 0; right: 0;
+    width: 35rem;
+    background: var(--white);
+    height: 100%;
+    text-align: center;
+    z-index: 1100;
+    padding: 0 2rem;
+    padding-top: 5rem;
+    display: none;
+
+    &.active {
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+        display: block;
+    }
+
+    #close-contact-info {
+        position: absolute;
+        top: 1rem; right: 1.5rem;
+        cursor: pointer;
+        font-size: 4rem;
+        color: var(--black);
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    .info {
+        padding: 2rem 0;
+
+        i {
+            @include iconsBox();
+            margin-bottom: .5rem;
+        }
+        
+        h3 {
+            @include titleText(2rem);
+            padding: 1rem 0;
+        }
+
+        p {
+            @include graphText(1.5rem);
+        }
+    }
+
+    .share {
+        padding-top: 2rem;
+        border-top: var(--border);
+        margin-top: 1rem;
+
+        a {
+            @include iconsBox();
+            margin: 0 .3rem;
+        }
+    }
+}
+
+.home {
+    padding: 0;
+
+    .slide {
+        min-height: 60rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, var(--white), transparent);
+        }
+
+        .content {
+            width: 50rem;
+            position: relative;
+        }
     }
 }
 
@@ -228,11 +341,19 @@ html {
     .header {
         padding: 1.5rem 2rem;
     }
+
+    section {
+        padding: 3rem 5%;
+    }
 }
 
 @media (max-width:991px) {
     html {
         font-size: 55%;
+    }
+
+    section {
+        padding: 3rem 2rem;
     }
 
     .header {
@@ -256,6 +377,19 @@ html {
                 display: block;
                 margin: 2rem;
             }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .header {
+
+        .search-form {
+            width: 90%;
+        }
+
+        .login-form {
+            width: 90%;
         }
     }
 }
